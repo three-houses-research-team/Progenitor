@@ -25,6 +25,6 @@ Includes Characters, Asset ID, Voice ID, Weapon Ranks, Spell list, Skill List, C
 Makes use of (an earlier version of) [Amicitia.IO from TGEnigma](https://github.com/TGEnigma/Amicitia.IO). 
 
 - Moonling, Progenitor Creator
-- DeathChoas, PersonData Editor
+- DeathChaos, PersonData Editor
 - Raytwo, Dimy, and all the other members of the Research team
 - [PKHeX](https://github.com/kwsch/PKHeX), Basic idea on a bit flag editor.
