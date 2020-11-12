@@ -17,7 +17,7 @@ Includes an editor for Weapons, Magic, Turrets, Gambits, Monster AOE, Equipment,
 
 ## PersonData Editor
 
-![UI](example_pictures/PersonData_Editor.png)
+![UI](example_pictures/Person_Editor.png)
 
 Includes Characters, Asset ID, Voice ID, Weapon Ranks, Spell list, Skill List, Combat Arts
 
