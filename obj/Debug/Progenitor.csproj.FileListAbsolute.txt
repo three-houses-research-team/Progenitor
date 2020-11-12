@@ -1,0 +1,15 @@
+D:\Users\moonl\source\repos\Progenitor\bin\Debug\Progenitor.exe.config
+D:\Users\moonl\source\repos\Progenitor\bin\Debug\Progenitor.exe
+D:\Users\moonl\source\repos\Progenitor\bin\Debug\Progenitor.pdb
+D:\Users\moonl\source\repos\Progenitor\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Users\moonl\source\repos\Progenitor\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.FixedDataMain.resources
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.PersonDataEditor.resources
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.Progenitor.resources
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.Properties.Resources.resources
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.csproj.GenerateResource.cache
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.csproj.CoreCompileInputs.cache
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.csproj.CopyComplete
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.exe
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.pdb
+D:\Users\moonl\source\repos\Progenitor\obj\Debug\Progenitor.csprojAssemblyReference.cache

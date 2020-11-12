@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC941C2D-A79B-43B8-8A11-AB5CD8163A9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Progenitor</RootNamespace>
+    <AssemblyName>Progenitor</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>So_this.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataFiles\Data\DataFile.cs" />
+    <Compile Include="DataFiles\Data\Sections\CombatArtBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\EquipmentBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\GambitBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\ItemsBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\MagicBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\MonsterAoEBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\TurretBlock.cs" />
+    <Compile Include="DataFiles\Data\Sections\WeaponBlock.cs" />
+    <Compile Include="DataFiles\PersonData\PersonDataFile.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\AssetIDBlock.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\CharacterBlocks.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\CombatArtsBlock.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\DefaultWpnBlock.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\DefaultWpnRanksAndCombatAssets.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\SkillListBlock.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\SpellListBlock.cs" />
+    <Compile Include="DataFiles\PersonData\Sections\VoiceIDBlock.cs" />
+    <Compile Include="FixedDataMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedDataMain.Designer.cs">
+      <DependentUpon>FixedDataMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IO\Common\BitFlags.cs" />
+    <Compile Include="PersonDataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonDataEditor.Designer.cs">
+      <DependentUpon>PersonDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgenitorMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgenitorMain.Designer.cs">
+      <DependentUpon>ProgenitorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IO\Common\AlignmentHelper.cs" />
+    <Compile Include="IO\Common\BinarySourceInfo.cs" />
+    <Compile Include="IO\Common\Bits.cs" />
+    <Compile Include="IO\Common\Color.cs" />
+    <Compile Include="IO\Common\EncodingExtensions.cs" />
+    <Compile Include="IO\Common\EndianBinaryReader.cs" />
+    <Compile Include="IO\Common\EndianBinaryWriter.cs" />
+    <Compile Include="IO\Common\EndianBinaryWriter.ExplicitWriteMethods.cs" />
+    <Compile Include="IO\Common\Endianness.cs" />
+    <Compile Include="IO\Common\EndiannessHelper.cs" />
+    <Compile Include="IO\Common\FileHelper.cs" />
+    <Compile Include="IO\Common\IBinarySerializable.cs" />
+    <Compile Include="IO\Common\IBinarySerializableExtensions.cs" />
+    <Compile Include="IO\Common\StreamView.cs" />
+    <Compile Include="IO\Common\StringBinaryFormat.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FixedDataMain.resx">
+      <DependentUpon>FixedDataMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonDataEditor.resx">
+      <DependentUpon>PersonDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgenitorMain.resx">
+      <DependentUpon>ProgenitorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="msgData\0.bin" />
+    <EmbeddedResource Include="msgData\1.bin" />
+    <EmbeddedResource Include="msgData\10.bin" />
+    <EmbeddedResource Include="msgData\11.bin" />
+    <EmbeddedResource Include="msgData\2.bin" />
+    <EmbeddedResource Include="msgData\3.bin" />
+    <EmbeddedResource Include="msgData\4.bin" />
+    <EmbeddedResource Include="msgData\5.bin" />
+    <EmbeddedResource Include="msgData\6.bin" />
+    <EmbeddedResource Include="msgData\7.bin" />
+    <EmbeddedResource Include="msgData\8.bin" />
+    <EmbeddedResource Include="msgData\9.bin" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Face\Face_0.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_1.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_10.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_11.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_12.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_13.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_14.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_15.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_16.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_17.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_18.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_19.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_2.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_20.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_21.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_22.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_23.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_24.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_25.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_26.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_27.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_28.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_29.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_3.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_30.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_31.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_32.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_33.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_34.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_35.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_36.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_37.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_38.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_39.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_4.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_40.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_41.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_42.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_43.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_44.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_45.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_46.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_47.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_48.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_49.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_5.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_50.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_500.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_501.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_502.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_503.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_505.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_507.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_51.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_52.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_53.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_54.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_55.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_56.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_6.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_63.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_7.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_8.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_85.bmp" />
+    <EmbeddedResource Include="Images\Face\Face_9.bmp" />
+    <EmbeddedResource Include="Images\Face\unk.bmp" />
+    <EmbeddedResource Include="Images\Crests\Crest_0.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_1.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_10.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_11.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_12.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_13.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_14.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_15.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_16.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_17.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_18.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_19.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_2.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_20.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_21.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_3.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_4.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_5.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_6.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_7.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_8.png" />
+    <EmbeddedResource Include="Images\Crests\Crest_9.png" />
+    <EmbeddedResource Include="Images\Items\Axe00.png" />
+    <EmbeddedResource Include="Images\Items\Axe01.png" />
+    <EmbeddedResource Include="Images\Items\Axe02.png" />
+    <EmbeddedResource Include="Images\Items\Axe03.png" />
+    <EmbeddedResource Include="Images\Items\Axe05.png" />
+    <EmbeddedResource Include="Images\Items\Black_Magic01.png" />
+    <EmbeddedResource Include="Images\Items\Black_Magic02.png" />
+    <EmbeddedResource Include="Images\Items\Black_Magic03.png" />
+    <EmbeddedResource Include="Images\Items\Black_Magic04.png" />
+    <EmbeddedResource Include="Images\Items\Bow00.png" />
+    <EmbeddedResource Include="Images\Items\Bow01.png" />
+    <EmbeddedResource Include="Images\Items\Bow02.png" />
+    <EmbeddedResource Include="Images\Items\Bow03.png" />
+    <EmbeddedResource Include="Images\Items\Bow04.png" />
+    <EmbeddedResource Include="Images\Items\Dark_Magic01.png" />
+    <EmbeddedResource Include="Images\Items\Dark_Magic02.png" />
+    <EmbeddedResource Include="Images\Items\Dark_Magic03.png" />
+    <EmbeddedResource Include="Images\Items\Dark_Magic04.png" />
+    <EmbeddedResource Include="Images\Items\Gauntlet00.png" />
+    <EmbeddedResource Include="Images\Items\Gauntlet01.png" />
+    <EmbeddedResource Include="Images\Items\Gauntlet02.png" />
+    <EmbeddedResource Include="Images\Items\Gauntlet03.png" />
+    <EmbeddedResource Include="Images\Items\Gauntlet04.png" />
+    <EmbeddedResource Include="Images\Items\Lance00.png" />
+    <EmbeddedResource Include="Images\Items\Lance01.png" />
+    <EmbeddedResource Include="Images\Items\Lance02.png" />
+    <EmbeddedResource Include="Images\Items\Lance03.png" />
+    <EmbeddedResource Include="Images\Items\Lance04.png" />
+    <EmbeddedResource Include="Images\Items\Stone01.png" />
+    <EmbeddedResource Include="Images\Items\Sword00.png" />
+    <EmbeddedResource Include="Images\Items\Sword01.png" />
+    <EmbeddedResource Include="Images\Items\Sword02.png" />
+    <EmbeddedResource Include="Images\Items\Sword03.png" />
+    <EmbeddedResource Include="Images\Items\Sword04.png" />
+    <EmbeddedResource Include="Images\Items\White_Magic01.png" />
+    <EmbeddedResource Include="Images\Items\White_Magic02.png" />
+    <EmbeddedResource Include="Images\Items\White_Magic03.png" />
+    <EmbeddedResource Include="Images\Items\White_Magic04.png" />
+    <EmbeddedResource Include="Images\Misc\So this.png" />
+    <EmbeddedResource Include="Images\Misc\None.png" />
+    <EmbeddedResource Include="Images\Misc\Plus.png" />
+    <EmbeddedResource Include="Images\Items\Crest_0.png" />
+    <EmbeddedResource Include="Images\Items\Crest_1.png" />
+    <EmbeddedResource Include="Images\Items\Crest_10.png" />
+    <EmbeddedResource Include="Images\Items\Crest_11.png" />
+    <EmbeddedResource Include="Images\Items\Crest_12.png" />
+    <EmbeddedResource Include="Images\Items\Crest_13.png" />
+    <EmbeddedResource Include="Images\Items\Crest_14.png" />
+    <EmbeddedResource Include="Images\Items\Crest_15.png" />
+    <EmbeddedResource Include="Images\Items\Crest_16.png" />
+    <EmbeddedResource Include="Images\Items\Crest_17.png" />
+    <EmbeddedResource Include="Images\Items\Crest_18.png" />
+    <EmbeddedResource Include="Images\Items\Crest_19.png" />
+    <EmbeddedResource Include="Images\Items\Crest_2.png" />
+    <EmbeddedResource Include="Images\Items\Crest_20.png" />
+    <EmbeddedResource Include="Images\Items\Crest_21.png" />
+    <EmbeddedResource Include="Images\Items\Crest_3.png" />
+    <EmbeddedResource Include="Images\Items\Crest_4.png" />
+    <EmbeddedResource Include="Images\Items\Crest_5.png" />
+    <EmbeddedResource Include="Images\Items\Crest_6.png" />
+    <EmbeddedResource Include="Images\Items\Crest_7.png" />
+    <EmbeddedResource Include="Images\Items\Crest_8.png" />
+    <EmbeddedResource Include="Images\Items\Crest_9.png" />
+    <EmbeddedResource Include="Images\Items\Necklace01.png" />
+    <EmbeddedResource Include="Images\Items\Necklace02.png" />
+    <EmbeddedResource Include="Images\Items\Necklace03.png" />
+    <EmbeddedResource Include="Images\Items\Necklace04.png" />
+    <EmbeddedResource Include="Images\Items\Ring01.png" />
+    <EmbeddedResource Include="Images\Items\Ring02.png" />
+    <EmbeddedResource Include="Images\Items\Ring03.png" />
+    <EmbeddedResource Include="Images\Items\Ring04.png" />
+    <EmbeddedResource Include="Images\Items\Shield01.png" />
+    <EmbeddedResource Include="Images\Items\Shield02.png" />
+    <EmbeddedResource Include="Images\Items\Shield03.png" />
+    <EmbeddedResource Include="Images\Items\Shield04.png" />
+    <EmbeddedResource Include="Images\Items\Staff01.png" />
+    <EmbeddedResource Include="Images\Items\Staff02.png" />
+    <EmbeddedResource Include="Images\Items\Staff03.png" />
+    <EmbeddedResource Include="Images\Items\Staff04.png" />
+    <EmbeddedResource Include="Images\Items\unkItem.png" />
+    <EmbeddedResource Include="Images\Items\Food.png" />
+    <EmbeddedResource Include="Images\Items\Gold.png" />
+    <EmbeddedResource Include="Images\Items\Healing_Item.png" />
+    <EmbeddedResource Include="Images\Items\Key.png" />
+    <EmbeddedResource Include="Images\Items\Seal.png" />
+    <EmbeddedResource Include="Images\Items\Stat_Booster.png" />
+    <EmbeddedResource Include="Images\Items\Torch.png" />
+    <Content Include="So_this.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
