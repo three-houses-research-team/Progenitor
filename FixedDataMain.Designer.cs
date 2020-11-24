@@ -624,6 +624,67 @@
             this.groupBox42 = new System.Windows.Forms.GroupBox();
             this.Items_LB_ItemsList = new System.Windows.Forms.ListBox();
             this.TB_CombatArt = new System.Windows.Forms.TabPage();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Tome = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Fist = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Bow = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Axe = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Lance = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Sword = new System.Windows.Forms.CheckBox();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_TB_Name = new System.Windows.Forms.TextBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.CombatArt_IB_Icon = new System.Windows.Forms.PictureBox();
+            this.CombatArt_CB_RequiredClass = new System.Windows.Forms.ComboBox();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.CombatArt_CB_RequireWeapon = new System.Windows.Forms.ComboBox();
+            this.CombatArt_EB_Effect = new System.Windows.Forms.ComboBox();
+            this.label152 = new System.Windows.Forms.Label();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_NB_EReserve2 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EReserve1 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EMonster = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EDragon = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EFiler = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_ECavalry = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EArmor = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_EInfantry = new System.Windows.Forms.CheckBox();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_NB_unk0xA = new System.Windows.Forms.NumericUpDown();
+            this.label148 = new System.Windows.Forms.Label();
+            this.CombatArt_NB_unk0x11 = new System.Windows.Forms.NumericUpDown();
+            this.CombatArt_NB_unk0xF = new System.Windows.Forms.NumericUpDown();
+            this.label156 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_NB_Flag8 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag7 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag6 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag5 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag4 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag3 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag2 = new System.Windows.Forms.CheckBox();
+            this.CombatArt_NB_Flag1 = new System.Windows.Forms.CheckBox();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_NB_MaxRange = new System.Windows.Forms.NumericUpDown();
+            this.CombatArt_NB_Hit = new System.Windows.Forms.NumericUpDown();
+            this.label162 = new System.Windows.Forms.Label();
+            this.CombatArt_NB_MinRange = new System.Windows.Forms.NumericUpDown();
+            this.label163 = new System.Windows.Forms.Label();
+            this.label164 = new System.Windows.Forms.Label();
+            this.CombatArt_NB_Cost = new System.Windows.Forms.NumericUpDown();
+            this.CombatArt_NB_Crit = new System.Windows.Forms.NumericUpDown();
+            this.CombatArt_NB_Might = new System.Windows.Forms.NumericUpDown();
+            this.label165 = new System.Windows.Forms.Label();
+            this.label166 = new System.Windows.Forms.Label();
+            this.CombatArt_NB_Avoid = new System.Windows.Forms.NumericUpDown();
+            this.label167 = new System.Windows.Forms.Label();
+            this.label168 = new System.Windows.Forms.Label();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.CombatArt_LB_CombatArtList = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.TB_Weapons.SuspendLayout();
@@ -794,6 +855,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.Items_NB_Hit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_NB_MT)).BeginInit();
             this.groupBox42.SuspendLayout();
+            this.TB_CombatArt.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_IB_Icon)).BeginInit();
+            this.groupBox45.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0xA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0x11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0xF)).BeginInit();
+            this.groupBox47.SuspendLayout();
+            this.groupBox48.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_MaxRange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Hit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_MinRange)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Cost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Crit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Might)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Avoid)).BeginInit();
+            this.groupBox43.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1088,7 +1168,7 @@
             this.Weapon_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Weapon_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Weapon_Check_EFiler.TabIndex = 63;
-            this.Weapon_Check_EFiler.Text = "Filer";
+            this.Weapon_Check_EFiler.Text = "Flier";
             this.Weapon_Check_EFiler.UseVisualStyleBackColor = true;
             this.Weapon_Check_EFiler.CheckedChanged += new System.EventHandler(this.Weapon_Check_EFiler_CheckedChanged);
             // 
@@ -2116,7 +2196,7 @@
             this.Magic_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Magic_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Magic_Check_EFiler.TabIndex = 63;
-            this.Magic_Check_EFiler.Text = "Filer";
+            this.Magic_Check_EFiler.Text = "Flier";
             this.Magic_Check_EFiler.UseVisualStyleBackColor = true;
             this.Magic_Check_EFiler.CheckedChanged += new System.EventHandler(this.Magic_Check_EFiler_CheckedChanged);
             // 
@@ -3143,7 +3223,7 @@
             this.Turret_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Turret_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Turret_Check_EFiler.TabIndex = 63;
-            this.Turret_Check_EFiler.Text = "Filer";
+            this.Turret_Check_EFiler.Text = "Flier";
             this.Turret_Check_EFiler.UseVisualStyleBackColor = true;
             this.Turret_Check_EFiler.CheckedChanged += new System.EventHandler(this.Turret_Check_EFiler_CheckedChanged);
             // 
@@ -4170,7 +4250,7 @@
             this.Gambit_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Gambit_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Gambit_Check_EFiler.TabIndex = 63;
-            this.Gambit_Check_EFiler.Text = "Filer";
+            this.Gambit_Check_EFiler.Text = "Flier";
             this.Gambit_Check_EFiler.UseVisualStyleBackColor = true;
             this.Gambit_Check_EFiler.CheckedChanged += new System.EventHandler(this.Gambit_Check_EFiler_CheckedChanged);
             // 
@@ -5024,7 +5104,7 @@
             this.MonsterAOE_CB_ItemType.Name = "MonsterAOE_CB_ItemType";
             this.MonsterAOE_CB_ItemType.Size = new System.Drawing.Size(152, 21);
             this.MonsterAOE_CB_ItemType.TabIndex = 27;
-            this.MonsterAOE_CB_ItemType.SelectedIndexChanged += new System.EventHandler(this.Gambit_CB_ItemType_SelectedIndexChanged);
+            this.MonsterAOE_CB_ItemType.SelectedIndexChanged += new System.EventHandler(this.MonsterAOE_CB_ItemType_SelectedIndexChanged);
             // 
             // label85
             // 
@@ -5112,7 +5192,7 @@
             this.MonsterAOE_CB_WeaponRank.Name = "MonsterAOE_CB_WeaponRank";
             this.MonsterAOE_CB_WeaponRank.Size = new System.Drawing.Size(152, 21);
             this.MonsterAOE_CB_WeaponRank.TabIndex = 11;
-            this.MonsterAOE_CB_WeaponRank.SelectedIndexChanged += new System.EventHandler(this.Turret_CB_WeaponRank_SelectedIndexChanged);
+            this.MonsterAOE_CB_WeaponRank.SelectedIndexChanged += new System.EventHandler(this.MonsterAOE_CB_WeaponType_SelectedIndexChanged);
             // 
             // label89
             // 
@@ -5197,7 +5277,7 @@
             this.MonsterAOE_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MonsterAOE_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.MonsterAOE_Check_EFiler.TabIndex = 63;
-            this.MonsterAOE_Check_EFiler.Text = "Filer";
+            this.MonsterAOE_Check_EFiler.Text = "Flier";
             this.MonsterAOE_Check_EFiler.UseVisualStyleBackColor = true;
             this.MonsterAOE_Check_EFiler.CheckedChanged += new System.EventHandler(this.MonsterAOE_Check_EFiler_CheckedChanged);
             // 
@@ -6224,7 +6304,7 @@
             this.Equipment_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Equipment_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Equipment_Check_EFiler.TabIndex = 63;
-            this.Equipment_Check_EFiler.Text = "Filer";
+            this.Equipment_Check_EFiler.Text = "Flier";
             this.Equipment_Check_EFiler.UseVisualStyleBackColor = true;
             this.Equipment_Check_EFiler.CheckedChanged += new System.EventHandler(this.Equipment_Check_EFiler_CheckedChanged);
             // 
@@ -7251,7 +7331,7 @@
             this.Items_Check_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Items_Check_EFiler.Size = new System.Drawing.Size(45, 17);
             this.Items_Check_EFiler.TabIndex = 63;
-            this.Items_Check_EFiler.Text = "Filer";
+            this.Items_Check_EFiler.Text = "Flier";
             this.Items_Check_EFiler.UseVisualStyleBackColor = true;
             this.Items_Check_EFiler.CheckedChanged += new System.EventHandler(this.Items_Check_EFiler_CheckedChanged);
             // 
@@ -8054,12 +8134,766 @@
             // TB_CombatArt
             // 
             this.TB_CombatArt.BackColor = System.Drawing.SystemColors.Control;
+            this.TB_CombatArt.Controls.Add(this.groupBox49);
+            this.TB_CombatArt.Controls.Add(this.groupBox44);
+            this.TB_CombatArt.Controls.Add(this.groupBox45);
+            this.TB_CombatArt.Controls.Add(this.groupBox46);
+            this.TB_CombatArt.Controls.Add(this.groupBox47);
+            this.TB_CombatArt.Controls.Add(this.groupBox48);
+            this.TB_CombatArt.Controls.Add(this.groupBox43);
             this.TB_CombatArt.Location = new System.Drawing.Point(4, 22);
             this.TB_CombatArt.Name = "TB_CombatArt";
             this.TB_CombatArt.Padding = new System.Windows.Forms.Padding(3);
             this.TB_CombatArt.Size = new System.Drawing.Size(842, 402);
             this.TB_CombatArt.TabIndex = 7;
             this.TB_CombatArt.Text = "Combat Arts";
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.checkBox1);
+            this.groupBox49.Controls.Add(this.checkBox2);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Tome);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Fist);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Bow);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Axe);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Lance);
+            this.groupBox49.Controls.Add(this.CombatArt_NB_Sword);
+            this.groupBox49.Location = new System.Drawing.Point(350, 171);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Size = new System.Drawing.Size(139, 228);
+            this.groupBox49.TabIndex = 60;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Usable Weapons";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(11, 199);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBox1.Size = new System.Drawing.Size(69, 17);
+            this.checkBox1.TabIndex = 59;
+            this.checkBox1.Text = "Unk Flag";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(11, 173);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkBox2.Size = new System.Drawing.Size(69, 17);
+            this.checkBox2.TabIndex = 58;
+            this.checkBox2.Text = "Unk Flag";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // CombatArt_NB_Tome
+            // 
+            this.CombatArt_NB_Tome.AutoSize = true;
+            this.CombatArt_NB_Tome.Location = new System.Drawing.Point(11, 148);
+            this.CombatArt_NB_Tome.Name = "CombatArt_NB_Tome";
+            this.CombatArt_NB_Tome.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Tome.Size = new System.Drawing.Size(53, 17);
+            this.CombatArt_NB_Tome.TabIndex = 57;
+            this.CombatArt_NB_Tome.Text = "Tome";
+            this.CombatArt_NB_Tome.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Tome.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // CombatArt_NB_Fist
+            // 
+            this.CombatArt_NB_Fist.AutoSize = true;
+            this.CombatArt_NB_Fist.Location = new System.Drawing.Point(11, 122);
+            this.CombatArt_NB_Fist.Name = "CombatArt_NB_Fist";
+            this.CombatArt_NB_Fist.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Fist.Size = new System.Drawing.Size(42, 17);
+            this.CombatArt_NB_Fist.TabIndex = 56;
+            this.CombatArt_NB_Fist.Text = "Fist";
+            this.CombatArt_NB_Fist.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Fist.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Fist_CheckedChanged);
+            // 
+            // CombatArt_NB_Bow
+            // 
+            this.CombatArt_NB_Bow.AutoSize = true;
+            this.CombatArt_NB_Bow.Location = new System.Drawing.Point(11, 96);
+            this.CombatArt_NB_Bow.Name = "CombatArt_NB_Bow";
+            this.CombatArt_NB_Bow.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Bow.Size = new System.Drawing.Size(47, 17);
+            this.CombatArt_NB_Bow.TabIndex = 55;
+            this.CombatArt_NB_Bow.Text = "Bow";
+            this.CombatArt_NB_Bow.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Bow.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Bow_CheckedChanged);
+            // 
+            // CombatArt_NB_Axe
+            // 
+            this.CombatArt_NB_Axe.AutoSize = true;
+            this.CombatArt_NB_Axe.Location = new System.Drawing.Point(11, 70);
+            this.CombatArt_NB_Axe.Name = "CombatArt_NB_Axe";
+            this.CombatArt_NB_Axe.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Axe.Size = new System.Drawing.Size(44, 17);
+            this.CombatArt_NB_Axe.TabIndex = 54;
+            this.CombatArt_NB_Axe.Text = "Axe";
+            this.CombatArt_NB_Axe.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Axe.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Axe_CheckedChanged);
+            // 
+            // CombatArt_NB_Lance
+            // 
+            this.CombatArt_NB_Lance.AutoSize = true;
+            this.CombatArt_NB_Lance.Location = new System.Drawing.Point(11, 45);
+            this.CombatArt_NB_Lance.Name = "CombatArt_NB_Lance";
+            this.CombatArt_NB_Lance.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Lance.Size = new System.Drawing.Size(56, 17);
+            this.CombatArt_NB_Lance.TabIndex = 53;
+            this.CombatArt_NB_Lance.Text = "Lance";
+            this.CombatArt_NB_Lance.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Lance.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Lance_CheckedChanged);
+            // 
+            // CombatArt_NB_Sword
+            // 
+            this.CombatArt_NB_Sword.AutoSize = true;
+            this.CombatArt_NB_Sword.Location = new System.Drawing.Point(11, 19);
+            this.CombatArt_NB_Sword.Name = "CombatArt_NB_Sword";
+            this.CombatArt_NB_Sword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Sword.Size = new System.Drawing.Size(56, 17);
+            this.CombatArt_NB_Sword.TabIndex = 52;
+            this.CombatArt_NB_Sword.Text = "Sword";
+            this.CombatArt_NB_Sword.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Sword.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Sword_CheckedChanged);
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Controls.Add(this.CombatArt_TB_Name);
+            this.groupBox44.Controls.Add(this.label149);
+            this.groupBox44.Controls.Add(this.CombatArt_IB_Icon);
+            this.groupBox44.Controls.Add(this.CombatArt_CB_RequiredClass);
+            this.groupBox44.Controls.Add(this.label150);
+            this.groupBox44.Controls.Add(this.label151);
+            this.groupBox44.Controls.Add(this.CombatArt_CB_RequireWeapon);
+            this.groupBox44.Controls.Add(this.CombatArt_EB_Effect);
+            this.groupBox44.Controls.Add(this.label152);
+            this.groupBox44.Location = new System.Drawing.Point(350, 6);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Size = new System.Drawing.Size(439, 159);
+            this.groupBox44.TabIndex = 22;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Magic Data";
+            // 
+            // CombatArt_TB_Name
+            // 
+            this.CombatArt_TB_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CombatArt_TB_Name.Location = new System.Drawing.Point(205, 22);
+            this.CombatArt_TB_Name.Name = "CombatArt_TB_Name";
+            this.CombatArt_TB_Name.ReadOnly = true;
+            this.CombatArt_TB_Name.Size = new System.Drawing.Size(228, 20);
+            this.CombatArt_TB_Name.TabIndex = 29;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label149.Location = new System.Drawing.Point(77, 23);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(41, 15);
+            this.label149.TabIndex = 28;
+            this.label149.Text = "Name";
+            // 
+            // CombatArt_IB_Icon
+            // 
+            this.CombatArt_IB_Icon.Location = new System.Drawing.Point(6, 18);
+            this.CombatArt_IB_Icon.Name = "CombatArt_IB_Icon";
+            this.CombatArt_IB_Icon.Size = new System.Drawing.Size(64, 64);
+            this.CombatArt_IB_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.CombatArt_IB_Icon.TabIndex = 0;
+            this.CombatArt_IB_Icon.TabStop = false;
+            // 
+            // CombatArt_CB_RequiredClass
+            // 
+            this.CombatArt_CB_RequiredClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CombatArt_CB_RequiredClass.FormattingEnabled = true;
+            this.CombatArt_CB_RequiredClass.Location = new System.Drawing.Point(205, 75);
+            this.CombatArt_CB_RequiredClass.Name = "CombatArt_CB_RequiredClass";
+            this.CombatArt_CB_RequiredClass.Size = new System.Drawing.Size(228, 21);
+            this.CombatArt_CB_RequiredClass.TabIndex = 23;
+            this.CombatArt_CB_RequiredClass.SelectedIndexChanged += new System.EventHandler(this.CombatArt_CB_RequiredClass_SelectedIndexChanged);
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.Location = new System.Drawing.Point(77, 49);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(100, 15);
+            this.label150.TabIndex = 8;
+            this.label150.Text = "Require Weapon";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label151.Location = new System.Drawing.Point(77, 76);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(91, 15);
+            this.label151.TabIndex = 22;
+            this.label151.Text = "Required Class";
+            // 
+            // CombatArt_CB_RequireWeapon
+            // 
+            this.CombatArt_CB_RequireWeapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CombatArt_CB_RequireWeapon.FormattingEnabled = true;
+            this.CombatArt_CB_RequireWeapon.Location = new System.Drawing.Point(205, 48);
+            this.CombatArt_CB_RequireWeapon.Name = "CombatArt_CB_RequireWeapon";
+            this.CombatArt_CB_RequireWeapon.Size = new System.Drawing.Size(228, 21);
+            this.CombatArt_CB_RequireWeapon.TabIndex = 9;
+            this.CombatArt_CB_RequireWeapon.SelectedIndexChanged += new System.EventHandler(this.CombatArt_CB_RequireWeapon_SelectedIndexChanged);
+            // 
+            // CombatArt_EB_Effect
+            // 
+            this.CombatArt_EB_Effect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CombatArt_EB_Effect.FormattingEnabled = true;
+            this.CombatArt_EB_Effect.Location = new System.Drawing.Point(205, 102);
+            this.CombatArt_EB_Effect.Name = "CombatArt_EB_Effect";
+            this.CombatArt_EB_Effect.Size = new System.Drawing.Size(228, 21);
+            this.CombatArt_EB_Effect.TabIndex = 11;
+            this.CombatArt_EB_Effect.SelectedIndexChanged += new System.EventHandler(this.CombatArt_EB_Effect_SelectedIndexChanged);
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label152.Location = new System.Drawing.Point(77, 103);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(37, 15);
+            this.label152.TabIndex = 10;
+            this.label152.Text = "Effect";
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EReserve2);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EReserve1);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EMonster);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EDragon);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EFiler);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_ECavalry);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EArmor);
+            this.groupBox45.Controls.Add(this.CombatArt_NB_EInfantry);
+            this.groupBox45.Location = new System.Drawing.Point(650, 171);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Size = new System.Drawing.Size(139, 228);
+            this.groupBox45.TabIndex = 21;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "Effectiveness";
+            // 
+            // CombatArt_NB_EReserve2
+            // 
+            this.CombatArt_NB_EReserve2.AutoSize = true;
+            this.CombatArt_NB_EReserve2.Location = new System.Drawing.Point(14, 196);
+            this.CombatArt_NB_EReserve2.Name = "CombatArt_NB_EReserve2";
+            this.CombatArt_NB_EReserve2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EReserve2.Size = new System.Drawing.Size(66, 17);
+            this.CombatArt_NB_EReserve2.TabIndex = 67;
+            this.CombatArt_NB_EReserve2.Text = "Reserve";
+            this.CombatArt_NB_EReserve2.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EReserve2.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EReserve2_CheckedChanged);
+            // 
+            // CombatArt_NB_EReserve1
+            // 
+            this.CombatArt_NB_EReserve1.AutoSize = true;
+            this.CombatArt_NB_EReserve1.Location = new System.Drawing.Point(14, 172);
+            this.CombatArt_NB_EReserve1.Name = "CombatArt_NB_EReserve1";
+            this.CombatArt_NB_EReserve1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EReserve1.Size = new System.Drawing.Size(66, 17);
+            this.CombatArt_NB_EReserve1.TabIndex = 66;
+            this.CombatArt_NB_EReserve1.Text = "Reserve";
+            this.CombatArt_NB_EReserve1.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EReserve1.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EReserve1_CheckedChanged);
+            // 
+            // CombatArt_NB_EMonster
+            // 
+            this.CombatArt_NB_EMonster.AutoSize = true;
+            this.CombatArt_NB_EMonster.Location = new System.Drawing.Point(14, 148);
+            this.CombatArt_NB_EMonster.Name = "CombatArt_NB_EMonster";
+            this.CombatArt_NB_EMonster.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EMonster.Size = new System.Drawing.Size(64, 17);
+            this.CombatArt_NB_EMonster.TabIndex = 65;
+            this.CombatArt_NB_EMonster.Text = "Monster";
+            this.CombatArt_NB_EMonster.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EMonster.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EMonster_CheckedChanged);
+            // 
+            // CombatArt_NB_EDragon
+            // 
+            this.CombatArt_NB_EDragon.AutoSize = true;
+            this.CombatArt_NB_EDragon.Location = new System.Drawing.Point(14, 122);
+            this.CombatArt_NB_EDragon.Name = "CombatArt_NB_EDragon";
+            this.CombatArt_NB_EDragon.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EDragon.Size = new System.Drawing.Size(61, 17);
+            this.CombatArt_NB_EDragon.TabIndex = 64;
+            this.CombatArt_NB_EDragon.Text = "Dragon";
+            this.CombatArt_NB_EDragon.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EDragon.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EDragon_CheckedChanged);
+            // 
+            // CombatArt_NB_EFiler
+            // 
+            this.CombatArt_NB_EFiler.AutoSize = true;
+            this.CombatArt_NB_EFiler.Location = new System.Drawing.Point(14, 99);
+            this.CombatArt_NB_EFiler.Name = "CombatArt_NB_EFiler";
+            this.CombatArt_NB_EFiler.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EFiler.Size = new System.Drawing.Size(45, 17);
+            this.CombatArt_NB_EFiler.TabIndex = 63;
+            this.CombatArt_NB_EFiler.Text = "Flier";
+            this.CombatArt_NB_EFiler.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EFiler.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EFiler_CheckedChanged);
+            // 
+            // CombatArt_NB_ECavalry
+            // 
+            this.CombatArt_NB_ECavalry.AutoSize = true;
+            this.CombatArt_NB_ECavalry.Location = new System.Drawing.Point(14, 73);
+            this.CombatArt_NB_ECavalry.Name = "CombatArt_NB_ECavalry";
+            this.CombatArt_NB_ECavalry.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_ECavalry.Size = new System.Drawing.Size(61, 17);
+            this.CombatArt_NB_ECavalry.TabIndex = 62;
+            this.CombatArt_NB_ECavalry.Text = "Cavalry";
+            this.CombatArt_NB_ECavalry.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_ECavalry.CheckedChanged += new System.EventHandler(this.CombatArt_NB_ECavalry_CheckedChanged);
+            // 
+            // CombatArt_NB_EArmor
+            // 
+            this.CombatArt_NB_EArmor.AutoSize = true;
+            this.CombatArt_NB_EArmor.Location = new System.Drawing.Point(14, 49);
+            this.CombatArt_NB_EArmor.Name = "CombatArt_NB_EArmor";
+            this.CombatArt_NB_EArmor.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EArmor.Size = new System.Drawing.Size(53, 17);
+            this.CombatArt_NB_EArmor.TabIndex = 61;
+            this.CombatArt_NB_EArmor.Text = "Armor";
+            this.CombatArt_NB_EArmor.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EArmor.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EArmor_CheckedChanged);
+            // 
+            // CombatArt_NB_EInfantry
+            // 
+            this.CombatArt_NB_EInfantry.AutoSize = true;
+            this.CombatArt_NB_EInfantry.Location = new System.Drawing.Point(14, 23);
+            this.CombatArt_NB_EInfantry.Name = "CombatArt_NB_EInfantry";
+            this.CombatArt_NB_EInfantry.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_EInfantry.Size = new System.Drawing.Size(61, 17);
+            this.CombatArt_NB_EInfantry.TabIndex = 60;
+            this.CombatArt_NB_EInfantry.Text = "Infantry";
+            this.CombatArt_NB_EInfantry.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_EInfantry.CheckedChanged += new System.EventHandler(this.CombatArt_NB_EInfantry_CheckedChanged);
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.CombatArt_NB_unk0xA);
+            this.groupBox46.Controls.Add(this.label148);
+            this.groupBox46.Controls.Add(this.CombatArt_NB_unk0x11);
+            this.groupBox46.Controls.Add(this.CombatArt_NB_unk0xF);
+            this.groupBox46.Controls.Add(this.label156);
+            this.groupBox46.Controls.Add(this.label158);
+            this.groupBox46.Location = new System.Drawing.Point(191, 240);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Size = new System.Drawing.Size(153, 156);
+            this.groupBox46.TabIndex = 20;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "Unknown Section";
+            // 
+            // CombatArt_NB_unk0xA
+            // 
+            this.CombatArt_NB_unk0xA.Location = new System.Drawing.Point(90, 21);
+            this.CombatArt_NB_unk0xA.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_unk0xA.Name = "CombatArt_NB_unk0xA";
+            this.CombatArt_NB_unk0xA.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_unk0xA.TabIndex = 32;
+            this.CombatArt_NB_unk0xA.ValueChanged += new System.EventHandler(this.CombatArt_NB_unk0xA_ValueChanged);
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label148.Location = new System.Drawing.Point(9, 21);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(63, 15);
+            this.label148.TabIndex = 31;
+            this.label148.Text = "Unk_0x0A";
+            // 
+            // CombatArt_NB_unk0x11
+            // 
+            this.CombatArt_NB_unk0x11.Location = new System.Drawing.Point(90, 73);
+            this.CombatArt_NB_unk0x11.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_unk0x11.Name = "CombatArt_NB_unk0x11";
+            this.CombatArt_NB_unk0x11.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_unk0x11.TabIndex = 30;
+            this.CombatArt_NB_unk0x11.ValueChanged += new System.EventHandler(this.CombatArt_NB_unk0x11_ValueChanged);
+            // 
+            // CombatArt_NB_unk0xF
+            // 
+            this.CombatArt_NB_unk0xF.Location = new System.Drawing.Point(90, 47);
+            this.CombatArt_NB_unk0xF.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_unk0xF.Name = "CombatArt_NB_unk0xF";
+            this.CombatArt_NB_unk0xF.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_unk0xF.TabIndex = 28;
+            this.CombatArt_NB_unk0xF.ValueChanged += new System.EventHandler(this.CombatArt_NB_unk0xF_ValueChanged);
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label156.Location = new System.Drawing.Point(9, 74);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(63, 15);
+            this.label156.TabIndex = 20;
+            this.label156.Text = "Unk_0x11";
+            // 
+            // label158
+            // 
+            this.label158.AutoSize = true;
+            this.label158.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label158.Location = new System.Drawing.Point(9, 47);
+            this.label158.Name = "label158";
+            this.label158.Size = new System.Drawing.Size(63, 15);
+            this.label158.TabIndex = 18;
+            this.label158.Text = "Unk_0x0F";
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag8);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag7);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag6);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag5);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag4);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag3);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag2);
+            this.groupBox47.Controls.Add(this.CombatArt_NB_Flag1);
+            this.groupBox47.Location = new System.Drawing.Point(495, 171);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Size = new System.Drawing.Size(149, 228);
+            this.groupBox47.TabIndex = 19;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Flags";
+            // 
+            // CombatArt_NB_Flag8
+            // 
+            this.CombatArt_NB_Flag8.AutoSize = true;
+            this.CombatArt_NB_Flag8.Location = new System.Drawing.Point(11, 199);
+            this.CombatArt_NB_Flag8.Name = "CombatArt_NB_Flag8";
+            this.CombatArt_NB_Flag8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag8.Size = new System.Drawing.Size(92, 17);
+            this.CombatArt_NB_Flag8.TabIndex = 59;
+            this.CombatArt_NB_Flag8.Text = "Moves Target";
+            this.CombatArt_NB_Flag8.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag8.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag8_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag7
+            // 
+            this.CombatArt_NB_Flag7.AutoSize = true;
+            this.CombatArt_NB_Flag7.Location = new System.Drawing.Point(11, 173);
+            this.CombatArt_NB_Flag7.Name = "CombatArt_NB_Flag7";
+            this.CombatArt_NB_Flag7.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag7.Size = new System.Drawing.Size(76, 17);
+            this.CombatArt_NB_Flag7.TabIndex = 58;
+            this.CombatArt_NB_Flag7.Text = "Target Ally";
+            this.CombatArt_NB_Flag7.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag7.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag7_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag6
+            // 
+            this.CombatArt_NB_Flag6.AutoSize = true;
+            this.CombatArt_NB_Flag6.Location = new System.Drawing.Point(11, 148);
+            this.CombatArt_NB_Flag6.Name = "CombatArt_NB_Flag6";
+            this.CombatArt_NB_Flag6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag6.Size = new System.Drawing.Size(69, 17);
+            this.CombatArt_NB_Flag6.TabIndex = 57;
+            this.CombatArt_NB_Flag6.Text = "Unk Flag";
+            this.CombatArt_NB_Flag6.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag6.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag6_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag5
+            // 
+            this.CombatArt_NB_Flag5.AutoSize = true;
+            this.CombatArt_NB_Flag5.Location = new System.Drawing.Point(11, 122);
+            this.CombatArt_NB_Flag5.Name = "CombatArt_NB_Flag5";
+            this.CombatArt_NB_Flag5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag5.Size = new System.Drawing.Size(93, 17);
+            this.CombatArt_NB_Flag5.TabIndex = 56;
+            this.CombatArt_NB_Flag5.Text = "Learned by All";
+            this.CombatArt_NB_Flag5.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag5.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag5_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag4
+            // 
+            this.CombatArt_NB_Flag4.AutoSize = true;
+            this.CombatArt_NB_Flag4.Location = new System.Drawing.Point(11, 96);
+            this.CombatArt_NB_Flag4.Name = "CombatArt_NB_Flag4";
+            this.CombatArt_NB_Flag4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag4.Size = new System.Drawing.Size(133, 17);
+            this.CombatArt_NB_Flag4.TabIndex = 55;
+            this.CombatArt_NB_Flag4.Text = "Prevent Counterattack";
+            this.CombatArt_NB_Flag4.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag4.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag4_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag3
+            // 
+            this.CombatArt_NB_Flag3.AutoSize = true;
+            this.CombatArt_NB_Flag3.Location = new System.Drawing.Point(11, 70);
+            this.CombatArt_NB_Flag3.Name = "CombatArt_NB_Flag3";
+            this.CombatArt_NB_Flag3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag3.Size = new System.Drawing.Size(69, 17);
+            this.CombatArt_NB_Flag3.TabIndex = 54;
+            this.CombatArt_NB_Flag3.Text = "Unk Flag";
+            this.CombatArt_NB_Flag3.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag3.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag3_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag2
+            // 
+            this.CombatArt_NB_Flag2.AutoSize = true;
+            this.CombatArt_NB_Flag2.Location = new System.Drawing.Point(11, 45);
+            this.CombatArt_NB_Flag2.Name = "CombatArt_NB_Flag2";
+            this.CombatArt_NB_Flag2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag2.Size = new System.Drawing.Size(69, 17);
+            this.CombatArt_NB_Flag2.TabIndex = 53;
+            this.CombatArt_NB_Flag2.Text = "Unk Flag";
+            this.CombatArt_NB_Flag2.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag2.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag2_CheckedChanged);
+            // 
+            // CombatArt_NB_Flag1
+            // 
+            this.CombatArt_NB_Flag1.AutoSize = true;
+            this.CombatArt_NB_Flag1.Location = new System.Drawing.Point(11, 19);
+            this.CombatArt_NB_Flag1.Name = "CombatArt_NB_Flag1";
+            this.CombatArt_NB_Flag1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CombatArt_NB_Flag1.Size = new System.Drawing.Size(55, 17);
+            this.CombatArt_NB_Flag1.TabIndex = 52;
+            this.CombatArt_NB_Flag1.Text = "Magic";
+            this.CombatArt_NB_Flag1.UseVisualStyleBackColor = true;
+            this.CombatArt_NB_Flag1.CheckedChanged += new System.EventHandler(this.CombatArt_NB_Flag1_CheckedChanged);
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.CombatArt_NB_MaxRange);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_Hit);
+            this.groupBox48.Controls.Add(this.label162);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_MinRange);
+            this.groupBox48.Controls.Add(this.label163);
+            this.groupBox48.Controls.Add(this.label164);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_Cost);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_Crit);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_Might);
+            this.groupBox48.Controls.Add(this.label165);
+            this.groupBox48.Controls.Add(this.label166);
+            this.groupBox48.Controls.Add(this.CombatArt_NB_Avoid);
+            this.groupBox48.Controls.Add(this.label167);
+            this.groupBox48.Controls.Add(this.label168);
+            this.groupBox48.Location = new System.Drawing.Point(192, 6);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(152, 231);
+            this.groupBox48.TabIndex = 18;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "Stats";
+            // 
+            // CombatArt_NB_MaxRange
+            // 
+            this.CombatArt_NB_MaxRange.Location = new System.Drawing.Point(89, 148);
+            this.CombatArt_NB_MaxRange.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_MaxRange.Name = "CombatArt_NB_MaxRange";
+            this.CombatArt_NB_MaxRange.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_MaxRange.TabIndex = 26;
+            this.CombatArt_NB_MaxRange.ValueChanged += new System.EventHandler(this.CombatArt_NB_MaxRange_ValueChanged);
+            // 
+            // CombatArt_NB_Hit
+            // 
+            this.CombatArt_NB_Hit.Location = new System.Drawing.Point(89, 96);
+            this.CombatArt_NB_Hit.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_Hit.Minimum = new decimal(new int[] {
+            128,
+            0,
+            0,
+            -2147483648});
+            this.CombatArt_NB_Hit.Name = "CombatArt_NB_Hit";
+            this.CombatArt_NB_Hit.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_Hit.TabIndex = 17;
+            this.CombatArt_NB_Hit.ValueChanged += new System.EventHandler(this.CombatArt_NB_Hit_ValueChanged);
+            // 
+            // label162
+            // 
+            this.label162.AutoSize = true;
+            this.label162.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label162.Location = new System.Drawing.Point(6, 97);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(22, 15);
+            this.label162.TabIndex = 16;
+            this.label162.Text = "Hit";
+            // 
+            // CombatArt_NB_MinRange
+            // 
+            this.CombatArt_NB_MinRange.Location = new System.Drawing.Point(89, 174);
+            this.CombatArt_NB_MinRange.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_MinRange.Name = "CombatArt_NB_MinRange";
+            this.CombatArt_NB_MinRange.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_MinRange.TabIndex = 15;
+            this.CombatArt_NB_MinRange.ValueChanged += new System.EventHandler(this.CombatArt_NB_MinRange_ValueChanged);
+            // 
+            // label163
+            // 
+            this.label163.AutoSize = true;
+            this.label163.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label163.Location = new System.Drawing.Point(6, 175);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(68, 15);
+            this.label163.TabIndex = 14;
+            this.label163.Text = "Min Range";
+            // 
+            // label164
+            // 
+            this.label164.AutoSize = true;
+            this.label164.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label164.Location = new System.Drawing.Point(6, 149);
+            this.label164.Name = "label164";
+            this.label164.Size = new System.Drawing.Size(71, 15);
+            this.label164.TabIndex = 12;
+            this.label164.Text = "Max Range";
+            // 
+            // CombatArt_NB_Cost
+            // 
+            this.CombatArt_NB_Cost.Location = new System.Drawing.Point(89, 122);
+            this.CombatArt_NB_Cost.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_Cost.Name = "CombatArt_NB_Cost";
+            this.CombatArt_NB_Cost.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_Cost.TabIndex = 7;
+            this.CombatArt_NB_Cost.ValueChanged += new System.EventHandler(this.CombatArt_NB_Cost_ValueChanged);
+            // 
+            // CombatArt_NB_Crit
+            // 
+            this.CombatArt_NB_Crit.Location = new System.Drawing.Point(89, 70);
+            this.CombatArt_NB_Crit.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_Crit.Minimum = new decimal(new int[] {
+            128,
+            0,
+            0,
+            -2147483648});
+            this.CombatArt_NB_Crit.Name = "CombatArt_NB_Crit";
+            this.CombatArt_NB_Crit.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_Crit.TabIndex = 6;
+            this.CombatArt_NB_Crit.ValueChanged += new System.EventHandler(this.CombatArt_NB_Crit_ValueChanged);
+            // 
+            // CombatArt_NB_Might
+            // 
+            this.CombatArt_NB_Might.Location = new System.Drawing.Point(89, 44);
+            this.CombatArt_NB_Might.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_Might.Name = "CombatArt_NB_Might";
+            this.CombatArt_NB_Might.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_Might.TabIndex = 5;
+            this.CombatArt_NB_Might.ValueChanged += new System.EventHandler(this.CombatArt_NB_Might_ValueChanged);
+            // 
+            // label165
+            // 
+            this.label165.AutoSize = true;
+            this.label165.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label165.Location = new System.Drawing.Point(6, 123);
+            this.label165.Name = "label165";
+            this.label165.Size = new System.Drawing.Size(31, 15);
+            this.label165.TabIndex = 4;
+            this.label165.Text = "Cost";
+            // 
+            // label166
+            // 
+            this.label166.AutoSize = true;
+            this.label166.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label166.Location = new System.Drawing.Point(6, 71);
+            this.label166.Name = "label166";
+            this.label166.Size = new System.Drawing.Size(25, 15);
+            this.label166.TabIndex = 3;
+            this.label166.Text = "Crit";
+            // 
+            // CombatArt_NB_Avoid
+            // 
+            this.CombatArt_NB_Avoid.Location = new System.Drawing.Point(89, 18);
+            this.CombatArt_NB_Avoid.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.CombatArt_NB_Avoid.Minimum = new decimal(new int[] {
+            128,
+            0,
+            0,
+            -2147483648});
+            this.CombatArt_NB_Avoid.Name = "CombatArt_NB_Avoid";
+            this.CombatArt_NB_Avoid.Size = new System.Drawing.Size(57, 20);
+            this.CombatArt_NB_Avoid.TabIndex = 2;
+            this.CombatArt_NB_Avoid.ValueChanged += new System.EventHandler(this.CombatArt_NB_Avoid_ValueChanged);
+            // 
+            // label167
+            // 
+            this.label167.AutoSize = true;
+            this.label167.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label167.Location = new System.Drawing.Point(6, 46);
+            this.label167.Name = "label167";
+            this.label167.Size = new System.Drawing.Size(38, 15);
+            this.label167.TabIndex = 1;
+            this.label167.Text = "Might";
+            // 
+            // label168
+            // 
+            this.label168.AutoSize = true;
+            this.label168.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label168.Location = new System.Drawing.Point(6, 19);
+            this.label168.Name = "label168";
+            this.label168.Size = new System.Drawing.Size(36, 15);
+            this.label168.TabIndex = 0;
+            this.label168.Text = "Avoid";
+            // 
+            // groupBox43
+            // 
+            this.groupBox43.Controls.Add(this.CombatArt_LB_CombatArtList);
+            this.groupBox43.Location = new System.Drawing.Point(6, 6);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.Size = new System.Drawing.Size(180, 393);
+            this.groupBox43.TabIndex = 1;
+            this.groupBox43.TabStop = false;
+            this.groupBox43.Text = "Combat Arts";
+            // 
+            // CombatArt_LB_CombatArtList
+            // 
+            this.CombatArt_LB_CombatArtList.FormattingEnabled = true;
+            this.CombatArt_LB_CombatArtList.Location = new System.Drawing.Point(6, 19);
+            this.CombatArt_LB_CombatArtList.Name = "CombatArt_LB_CombatArtList";
+            this.CombatArt_LB_CombatArtList.Size = new System.Drawing.Size(168, 368);
+            this.CombatArt_LB_CombatArtList.TabIndex = 1;
+            this.CombatArt_LB_CombatArtList.SelectedIndexChanged += new System.EventHandler(this.CombatArt_LB_CombatArtList_SelectedIndexChanged);
             // 
             // FixedDataMain
             // 
@@ -8278,6 +9112,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.Items_NB_Hit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Items_NB_MT)).EndInit();
             this.groupBox42.ResumeLayout(false);
+            this.TB_CombatArt.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox49.PerformLayout();
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_IB_Icon)).EndInit();
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox46.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0xA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0x11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_unk0xF)).EndInit();
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox48.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_MaxRange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Hit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_MinRange)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Cost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Crit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Might)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CombatArt_NB_Avoid)).EndInit();
+            this.groupBox43.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -8881,5 +9740,66 @@
         private System.Windows.Forms.GroupBox groupBox42;
         private System.Windows.Forms.ListBox Items_LB_ItemsList;
         private System.Windows.Forms.CheckBox Turret_Check_EArmor;
+        private System.Windows.Forms.GroupBox groupBox43;
+        private System.Windows.Forms.ListBox CombatArt_LB_CombatArtList;
+        private System.Windows.Forms.GroupBox groupBox44;
+        private System.Windows.Forms.TextBox CombatArt_TB_Name;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.PictureBox CombatArt_IB_Icon;
+        private System.Windows.Forms.ComboBox CombatArt_CB_RequiredClass;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.ComboBox CombatArt_CB_RequireWeapon;
+        private System.Windows.Forms.ComboBox CombatArt_EB_Effect;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.GroupBox groupBox45;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EReserve2;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EReserve1;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EMonster;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EDragon;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EFiler;
+        private System.Windows.Forms.CheckBox CombatArt_NB_ECavalry;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EArmor;
+        private System.Windows.Forms.CheckBox CombatArt_NB_EInfantry;
+        private System.Windows.Forms.GroupBox groupBox46;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_unk0x11;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_unk0xF;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.GroupBox groupBox47;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag8;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag7;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag6;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag5;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag4;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag3;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag2;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Flag1;
+        private System.Windows.Forms.GroupBox groupBox48;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_MaxRange;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_Hit;
+        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_MinRange;
+        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_Cost;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_Crit;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_Might;
+        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_Avoid;
+        private System.Windows.Forms.Label label167;
+        private System.Windows.Forms.Label label168;
+        private System.Windows.Forms.NumericUpDown CombatArt_NB_unk0xA;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.GroupBox groupBox49;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Tome;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Fist;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Bow;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Axe;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Lance;
+        private System.Windows.Forms.CheckBox CombatArt_NB_Sword;
     }
 }

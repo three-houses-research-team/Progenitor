@@ -32,6 +32,7 @@ namespace Progenitor
         public string filePath { get; set; }
         public string nameOfFile { get; set; }
         public List<String> OtherNames { get; private set; }
+        public List<String> CAEffects { get; private set; }
 
         #region Open and Save File
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace Progenitor
                     tabControl1.TabPages.Add(TB_MonsterAOE);
                     tabControl1.TabPages.Add(TB_Equipment);
                     tabControl1.TabPages.Add(TB_Items);
-                    //tabControl1.TabPages.Add(TB_CombatArt);
+                    tabControl1.TabPages.Add(TB_CombatArt);
                 }
 
                 LoadLanguageTomsgDataNames();
@@ -215,6 +216,63 @@ namespace Progenitor
                 OtherNames.Add("Unknown");
                 OtherNames.Add("Unknown");
                 OtherNames.Add("Unknown");
+                //Store Combat Effect Names
+                CAEffects = new List<string>();
+                CAEffects.Add("None");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Leaves Foe With 1 HP");
+                CAEffects.Add("Increase Damage Based on Missing HP");
+                CAEffects.Add("Hits Twice");
+                CAEffects.Add("Hits 3 times");
+                CAEffects.Add("Astra Skill");
+                CAEffects.Add("Depletes all Durability for Amount*30% Might");
+                CAEffects.Add("Pervent Foe from moving for 1 turn");
+                CAEffects.Add("Prevent Foe from using Magic for 1 turn");
+                CAEffects.Add("Minus 5 Str for 1 turn on Foe");
+                CAEffects.Add("Minus 5 Def for 1 turn on Foe");
+                CAEffects.Add("Minus 5 Res for 1 turn on Foe");
+                CAEffects.Add("Restores 50% of Users HP");
+                CAEffects.Add("Restores HP equal to 50% of Damage");
+                CAEffects.Add("Moves 1 space in front of foe");
+                CAEffects.Add("After Combat user moves 1 space back");
+                CAEffects.Add("Triggers Follow up Attack");
+                CAEffects.Add("Swap places with Ally");
+                CAEffects.Add("Pushes Ally forward 1 spaces");
+                CAEffects.Add("Move to other side of Ally");
+                CAEffects.Add("Move User and Ally back 1 space");
+                CAEffects.Add("Pushes Ally forward 2 spaces");
+                CAEffects.Add("Triangle Attack Effect");
+                CAEffects.Add("Can Kill Instantly");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Effective Against all Foes");
+                CAEffects.Add("Unknown");
+                CAEffects.Add("Might increases based on Mag");
+                CAEffects.Add("Might increases based on Dex");
+                CAEffects.Add("Might increases based on Spd");
+                CAEffects.Add("Might increases based on Res");
+                CAEffects.Add("Might increases based on Def");
+                CAEffects.Add("Avoid all attacks next Combat");
+                CAEffects.Add("Can move again after successful hit");
+                CAEffects.Add("Might increases based on Cha");
+                CAEffects.Add("Calculates Damage based on lower Def or Res");
+                CAEffects.Add("Swap Possition with Ally");
                 ClearBoxesForLangChange();
 
                 //read List for Weapon Tab names
@@ -268,6 +326,10 @@ namespace Progenitor
                 for (int i = 0; i < currentDatafile.SectionBlockCount[6]; i++)
                 {
                     Items_LB_ItemsList.Items.Add(i.ToString("D" + 4) + " : " + msgDataNames[4656 + i]);
+                }
+                for (int i = 0; i < currentDatafile.SectionBlockCount[7]; i++)
+                {
+                    CombatArt_LB_CombatArtList.Items.Add(i.ToString("D" + 4) + " : " + msgDataNames[6014 + i]);
                 }
                 //read List for Crest Names
                 for (int i = 0; i <= 85; i++)
@@ -331,6 +393,21 @@ namespace Progenitor
                     Equipment_CB_MagicEffect.Items.Add(OtherNames[i + 32]);
                     Items_CB_MagicEffect.Items.Add(OtherNames[i + 32]);
                 }
+                //read List for CS Effects
+                for (int i = 0; i <= 54; i++)
+                {
+                    CombatArt_EB_Effect.Items.Add(CAEffects[i]);
+                }
+                for (int i = 0; i <= 99; i++)
+                {
+                    CombatArt_CB_RequiredClass.Items.Add(msgDataNames[3453 + i]);
+                }
+                CombatArt_CB_RequiredClass.Items.Add(CAEffects[0]);
+                for (int i = 0; i <= 499; i++)
+                {
+                    CombatArt_CB_RequireWeapon.Items.Add(msgDataNames[i + 3746]);
+                }
+                CombatArt_CB_RequireWeapon.Items.Add(CAEffects[0]);
             }
         }
 
@@ -4126,5 +4203,408 @@ namespace Progenitor
         }
         #endregion
 
+        #region Combat Art Load
+
+        private void CombatArt_LB_CombatArtList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(String.Format("Selected Index for Combat Art: {0}",CombatArt_LB_CombatArtList.SelectedIndex));
+            CombatArts_DisplayCurrent();
+            CombatArt_ReloadImage();
+        }
+        private void CombatArts_DisplayCurrent()
+        {
+            var Current = currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex];
+            //Weapon Data
+            CombatArt_TB_Name.Text = msgDataNames[CombatArt_LB_CombatArtList.SelectedIndex + 6014];
+            Console.WriteLine(msgDataNames[CombatArt_LB_CombatArtList.SelectedIndex + 6014]);
+            if (Current.RequiredWeapon == -1)
+            {
+                CombatArt_CB_RequireWeapon.SelectedIndex = 500;
+            }
+            else
+            {
+                CombatArt_CB_RequireWeapon.SelectedIndex = Current.RequiredWeapon;
+            }
+            if (Current.RequiredClass == 255)
+            {
+                CombatArt_CB_RequiredClass.SelectedIndex = 100;
+            }
+            else
+            {
+                CombatArt_CB_RequiredClass.SelectedIndex = Current.RequiredClass;
+            }
+            CombatArt_EB_Effect.SelectedIndex = Current.Effect;
+            
+
+            //weapon Stats
+            CombatArt_NB_Avoid.Value = Current.Avoid;
+            CombatArt_NB_Might.Value = Current.Might;
+            CombatArt_NB_Crit.Value = Current.Crit;
+            CombatArt_NB_Hit.Value = Current.Hit;
+            CombatArt_NB_MaxRange.Value = Current.MaxRange;
+            CombatArt_NB_MinRange.Value = Current.MinRange;
+            CombatArt_NB_Cost.Value = Current.DurabilityCost;
+
+            //Unk Values
+            CombatArt_NB_unk0xA.Value = Current.unk_0xA;
+            CombatArt_NB_unk0xF.Value = Current.unk_0xF;
+            CombatArt_NB_unk0x11.Value = Current.unk_0x11;
+
+            //Weapons
+            CombatArt_NB_Sword.Checked = BitFlags.GetFlag(Current.WeapType, 0);
+            CombatArt_NB_Lance.Checked = BitFlags.GetFlag(Current.WeapType, 1);
+            CombatArt_NB_Axe.Checked = BitFlags.GetFlag(Current.WeapType, 2);
+            CombatArt_NB_Bow.Checked = BitFlags.GetFlag(Current.WeapType, 3);
+            CombatArt_NB_Fist.Checked = BitFlags.GetFlag(Current.WeapType, 4);
+            CombatArt_NB_Tome.Checked = BitFlags.GetFlag(Current.WeapType, 5);
+            checkBox2.Checked = BitFlags.GetFlag(Current.WeapType, 6);
+            checkBox1.Checked = BitFlags.GetFlag(Current.WeapType, 7);
+
+            //Flags
+            CombatArt_NB_Flag1.Checked = BitFlags.GetFlag(Current.Flags, 0);
+            CombatArt_NB_Flag2.Checked = BitFlags.GetFlag(Current.Flags, 1);
+            CombatArt_NB_Flag3.Checked = BitFlags.GetFlag(Current.Flags, 2);
+            CombatArt_NB_Flag4.Checked = BitFlags.GetFlag(Current.Flags, 3);
+            CombatArt_NB_Flag5.Checked = BitFlags.GetFlag(Current.Flags, 4);
+            CombatArt_NB_Flag6.Checked = BitFlags.GetFlag(Current.Flags, 5);
+            CombatArt_NB_Flag7.Checked = BitFlags.GetFlag(Current.Flags, 6);
+            CombatArt_NB_Flag8.Checked = BitFlags.GetFlag(Current.Flags, 7);
+
+            //Effectivness
+            CombatArt_NB_EInfantry.Checked = BitFlags.GetFlag(Current.Effectiveness, 0);
+            CombatArt_NB_EArmor.Checked = BitFlags.GetFlag(Current.Effectiveness, 1);
+            CombatArt_NB_ECavalry.Checked = BitFlags.GetFlag(Current.Effectiveness, 2);
+            CombatArt_NB_EFiler.Checked = BitFlags.GetFlag(Current.Effectiveness, 3);
+            CombatArt_NB_EDragon.Checked = BitFlags.GetFlag(Current.Effectiveness, 4);
+            CombatArt_NB_EMonster.Checked = BitFlags.GetFlag(Current.Effectiveness, 5);
+            CombatArt_NB_EReserve1.Checked = BitFlags.GetFlag(Current.Effectiveness, 6);
+            CombatArt_NB_EReserve2.Checked = BitFlags.GetFlag(Current.Effectiveness, 7);
+        }
+
+        private void CombatArt_ReloadImage()
+        {
+            //Load Crest Images
+            Assembly myAssembly = Assembly.GetExecutingAssembly();
+            Stream myStream = myAssembly.GetManifestResourceStream("Progenitor.Images.Misc.None.png");
+            
+            if (CombatArt_NB_Sword.Checked && !CombatArt_NB_Lance.Checked && !CombatArt_NB_Axe.Checked && !CombatArt_NB_Bow.Checked && !CombatArt_NB_Fist.Checked)
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Sword.png"));
+            }
+            else if (CombatArt_NB_Lance.Checked && !CombatArt_NB_Sword.Checked && !CombatArt_NB_Axe.Checked && !CombatArt_NB_Bow.Checked && !CombatArt_NB_Fist.Checked)
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Lance.png"));
+            }
+            else if (CombatArt_NB_Axe.Checked && !CombatArt_NB_Lance.Checked && !CombatArt_NB_Sword.Checked && !CombatArt_NB_Bow.Checked && !CombatArt_NB_Fist.Checked)
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Axe.png"));
+            }
+            else if (CombatArt_NB_Bow.Checked && !CombatArt_NB_Lance.Checked && !CombatArt_NB_Axe.Checked && !CombatArt_NB_Sword.Checked && !CombatArt_NB_Fist.Checked)
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Bow.png"));
+            }
+            else if (CombatArt_NB_Fist.Checked && !CombatArt_NB_Lance.Checked && !CombatArt_NB_Axe.Checked && !CombatArt_NB_Bow.Checked && !CombatArt_NB_Sword.Checked)
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Fist.png"));
+            }
+            else
+            {
+                myStream = myAssembly.GetManifestResourceStream(String.Format("Progenitor.Images.Arts.Other.png"));
+            }
+
+            Bitmap icon = new Bitmap(myStream);
+            CombatArt_IB_Icon.Image = icon;
+        }
+
+
+        #endregion
+
+        #region Combat Art Write
+
+        private void CombatArt_NB_Avoid_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Avoid = Decimal.ToSByte(CombatArt_NB_Avoid.Value);
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Avoid2 = Decimal.ToSByte(CombatArt_NB_Avoid.Value);
+        }
+
+        private void CombatArt_NB_Might_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Might = Decimal.ToByte(CombatArt_NB_Might.Value);
+        }
+
+        private void CombatArt_NB_Crit_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Crit = Decimal.ToSByte(CombatArt_NB_Crit.Value);
+        }
+
+        private void CombatArt_NB_Hit_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Hit = Decimal.ToSByte(CombatArt_NB_Hit.Value);
+        }
+
+        private void CombatArt_NB_Cost_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].DurabilityCost = Decimal.ToByte(CombatArt_NB_Cost.Value);
+        }
+
+        private void CombatArt_NB_MaxRange_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].MaxRange = Decimal.ToByte(CombatArt_NB_MaxRange.Value);
+        }
+
+        private void CombatArt_NB_MinRange_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].MinRange = Decimal.ToByte(CombatArt_NB_MinRange.Value);
+        }
+
+        private void CombatArt_NB_unk0xA_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].unk_0xA = Decimal.ToByte(CombatArt_NB_unk0xA.Value);
+        }
+
+        private void CombatArt_NB_unk0xF_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].unk_0xF = Decimal.ToByte(CombatArt_NB_unk0xF.Value);
+        }
+
+        private void CombatArt_NB_unk0x11_ValueChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].unk_0x11 = Decimal.ToByte(CombatArt_NB_unk0xF.Value);
+        }
+
+        private void CombatArt_CB_RequireWeapon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_CB_RequireWeapon.SelectedIndex == 500)
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].RequiredWeapon = Decimal.ToInt16(-1);
+            }
+            else
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].RequiredWeapon = Decimal.ToInt16(CombatArt_CB_RequireWeapon.SelectedIndex);
+            }
+        }
+
+        private void CombatArt_CB_RequiredClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_CB_RequiredClass.SelectedIndex == 100)
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].RequiredClass = Decimal.ToByte(255);
+            }
+            else
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].RequiredClass = Decimal.ToByte(CombatArt_CB_RequiredClass.SelectedIndex);
+            }
+        }
+
+        private void CombatArt_EB_Effect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effect = Decimal.ToByte(CombatArt_EB_Effect.SelectedIndex);
+        }
+
+        private void CombatArt_NB_Sword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Sword.Checked)
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 0, true);
+            }
+            else
+            {
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 0, false);
+            }
+            CombatArt_ReloadImage();
+        }
+
+        private void CombatArt_NB_Lance_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Lance.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 1, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 1, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void CombatArt_NB_Axe_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Axe.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 2, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 2, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void CombatArt_NB_Bow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Bow.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 3, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 3, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void CombatArt_NB_Fist_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Fist.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 4, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 4, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Tome.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 5, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 5, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 6, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 6, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 7, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].WeapType, 7, false);
+            CombatArt_ReloadImage();
+        }
+
+        private void CombatArt_NB_Flag1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag1.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 0, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 0, false);
+        }
+
+        private void CombatArt_NB_Flag2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag2.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 1, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 1, false);
+        }
+
+        private void CombatArt_NB_Flag3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag3.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 2, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 2, false);
+        }
+
+        private void CombatArt_NB_Flag4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag4.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 3, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 3, false);
+        }
+
+        private void CombatArt_NB_Flag5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag5.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 4, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 4, false);
+        }
+
+        private void CombatArt_NB_Flag6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag6.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 5, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 5, false);
+        }
+
+        private void CombatArt_NB_Flag7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag7.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 6, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 6, false);
+        }
+
+        private void CombatArt_NB_Flag8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_Flag8.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 7, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Flags, 7, false);
+        }
+
+        private void CombatArt_NB_EInfantry_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EInfantry.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 0, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 0, false);
+        }
+
+        private void CombatArt_NB_EArmor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EArmor.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 1, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 1, false);
+        }
+
+        private void CombatArt_NB_ECavalry_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_ECavalry.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 2, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 2, false);
+        }
+
+        private void CombatArt_NB_EFiler_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EFiler.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 3, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 3, false);
+        }
+
+        private void CombatArt_NB_EDragon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EDragon.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 4, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 4, false);
+        }
+
+        private void CombatArt_NB_EMonster_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EMonster.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 5, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 5, false);
+        }
+
+        private void CombatArt_NB_EReserve1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EReserve1.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 6, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 6, false);
+        }
+
+        private void CombatArt_NB_EReserve2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CombatArt_NB_EReserve2.Checked)
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 7, true);
+            else
+                currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness = BitFlags.SetFlag(currentDatafile.CombatArt[CombatArt_LB_CombatArtList.SelectedIndex].Effectiveness, 7, false);
+        }
+
+        #endregion
     }
 }

@@ -328,6 +328,12 @@
     <EmbeddedResource Include="Images\Items\Seal.png" />
     <EmbeddedResource Include="Images\Items\Stat_Booster.png" />
     <EmbeddedResource Include="Images\Items\Torch.png" />
+    <EmbeddedResource Include="Images\Arts\Axe.png" />
+    <EmbeddedResource Include="Images\Arts\Bow.png" />
+    <EmbeddedResource Include="Images\Arts\Fist.png" />
+    <EmbeddedResource Include="Images\Arts\Lance.png" />
+    <EmbeddedResource Include="Images\Arts\Other.png" />
+    <EmbeddedResource Include="Images\Arts\Sword.png" />
     <Content Include="So_this.ico" />
   </ItemGroup>
   <ItemGroup />
