@@ -63,6 +63,14 @@
     <Compile Include="DataFiles\Data\Sections\MonsterAoEBlock.cs" />
     <Compile Include="DataFiles\Data\Sections\TurretBlock.cs" />
     <Compile Include="DataFiles\Data\Sections\WeaponBlock.cs" />
+    <Compile Include="MaterialDataEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialDataEditor.Designer.cs">
+      <DependentUpon>MaterialDataEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataFiles\MaterialData\MaterialDataFile.cs" />
+    <Compile Include="DataFiles\MaterialData\Sections\MaterialBlock.cs" />
     <Compile Include="DataFiles\PersonData\PersonDataFile.cs" />
     <Compile Include="DataFiles\PersonData\Sections\AssetIDBlock.cs" />
     <Compile Include="DataFiles\PersonData\Sections\CharacterBlocks.cs" />
@@ -108,6 +116,9 @@
     <Compile Include="IO\Common\StringBinaryFormat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MaterialDataEditor.resx">
+      <DependentUpon>MaterialDataEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FixedDataMain.resx">
       <DependentUpon>FixedDataMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +347,8 @@
     <EmbeddedResource Include="Images\Arts\Sword.png" />
     <Content Include="So_this.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataFiles\ActData\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

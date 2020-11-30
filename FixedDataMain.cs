@@ -63,6 +63,14 @@ namespace Progenitor
 
             //Reset Stuff
             Weapon_LB_WeaponList.Items.Clear();
+            Magic_LB_MagicList.Items.Clear();
+            Turret_LB_TurretList.Items.Clear();
+            Gambit_LB_GambitList.Items.Clear();
+            MonsterAOE_LB_MonsterAOEList.Items.Clear();
+            Equipment_LB_EquipmentList.Items.Clear();
+            Items_LB_ItemsList.Items.Clear();
+            CombatArt_LB_CombatArtList.Items.Clear();
+            
 
             //Read the contents of the file into a stream
             currentDatafile = new DataFile();

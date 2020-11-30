@@ -13,3 +13,4 @@ D:\Users\moonl\source\repos\Progenitor\bin\Release\System.Runtime.CompilerServic
 D:\Users\moonl\source\repos\Progenitor\obj\Release\Progenitor.csproj.CopyComplete
 D:\Users\moonl\source\repos\Progenitor\obj\Release\Progenitor.exe
 D:\Users\moonl\source\repos\Progenitor\obj\Release\Progenitor.pdb
+D:\Users\moonl\source\repos\Progenitor\obj\Release\Progenitor.DataFiles.MaterialDataEditor.resources

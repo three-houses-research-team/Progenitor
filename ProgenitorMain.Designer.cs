@@ -103,13 +103,13 @@
             // 
             // B_MaterialDataEditor
             // 
-            this.B_MaterialDataEditor.Enabled = false;
             this.B_MaterialDataEditor.Location = new System.Drawing.Point(130, 202);
             this.B_MaterialDataEditor.Name = "B_MaterialDataEditor";
             this.B_MaterialDataEditor.Size = new System.Drawing.Size(104, 52);
             this.B_MaterialDataEditor.TabIndex = 7;
             this.B_MaterialDataEditor.Text = "fixed_materialdata Editor";
             this.B_MaterialDataEditor.UseVisualStyleBackColor = true;
+            this.B_MaterialDataEditor.Click += new System.EventHandler(this.B_MaterialDataEditor_Click);
             // 
             // pictureBox1
             // 

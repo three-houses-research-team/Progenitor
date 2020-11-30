@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Progenitor.DataFiles;
 using Progenitor.DataFiles.Data;
 
 namespace Progenitor
@@ -60,6 +61,28 @@ namespace Progenitor
 
                     PersonDataEditor personeditor = new PersonDataEditor(nameOfFile, filePath);
                     personeditor.ShowDialog();
+                }
+                else return;
+            }
+        }
+
+        private void B_MaterialDataEditor_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "fixed_materialdata.bin (*.bin;*.datatable)|*.bin;*.datatable|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+                openFileDialog.Title = "open fixed_materialdata.bin (v1.2.0 or later)";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the Path of the specified file
+                    filePath = openFileDialog.FileName;
+                    nameOfFile = Path.GetFileName(filePath);
+
+                    MaterialDataEditor materialeditor = new MaterialDataEditor(nameOfFile, filePath);
+                    materialeditor.ShowDialog();
                 }
                 else return;
             }
